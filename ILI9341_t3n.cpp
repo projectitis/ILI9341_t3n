@@ -3115,7 +3115,7 @@ void ILI9341_t3n::drawFontChar(unsigned int c)
 			beginSPITransaction();
 			//Serial.printf("SetAddr %d %d %d %d\n", start_x_min, start_y_min, end_x, end_y);
 			// output rectangle we are updating... We have already clipped end_x/y, but not yet start_x/y
-			setAddr( start_x, start_y_min, end_x, end_y);
+			setAddr( start_x_min, start_y_min, end_x, end_y);
 			writecommand_cont(ILI9341_RAMWR);
 			int screen_y = start_y_min;
 			int screen_x;
